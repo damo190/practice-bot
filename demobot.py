@@ -31,7 +31,8 @@ def weather():
         return f'It is {temp} degrees today'
 
 @app.route('/lockout', methods = ['GET', 'POST'])
-def lockout(location = request.values.get('text')):
+def lockout():
+    location = request.values.get('text')
     if location == "":
         return "Where are you locked out?"
     else:
