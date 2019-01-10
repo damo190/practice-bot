@@ -23,8 +23,8 @@ def greet_person():
 def weather():
     temp = request.values.get('text')
 
-    if int(temp) > 30:
-        return "It's too hot!"
+    if int(temp) > 20:
+        return "🔥" * int(temp)
     else:
         return f'It is {temp} degrees today'
 if __name__ == '__main__':
