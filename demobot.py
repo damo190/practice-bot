@@ -33,7 +33,7 @@ def weather():
 @app.route('/lockout', methods = ['GET', 'POST'])
 def lockout():
     location = request.values.get('text')
-    if location == None:
+    if location == None or location == " ":
         return "Where are you locked out?"
     else:
         return f'Sending Smerity to {location} to save you'
