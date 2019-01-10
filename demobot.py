@@ -15,7 +15,7 @@ def hello_world():
 def greet_person():
     # Get the value of the 'name' query parameter
     # request.values is a dictionary (cool!)
-    name = request.values.get('name')
+    name = request.values.get('text')
     # This bot says hi to every name it gets sent!
     return f'hi {name}!'
 
