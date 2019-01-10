@@ -11,7 +11,7 @@ def hello_world():
     return 'Hello, World!'
 
 # You can access demobot’s greet command via <your website>/greet
-@app.route('/greet')
+@app.route('/greet', methods=['GET', 'POST'])
 def greet_person():
     # Get the value of the 'name' query parameter
     # request.values is a dictionary (cool!)
@@ -19,7 +19,7 @@ def greet_person():
     # This bot says hi to every name it gets sent!
     return f'hi {name}!'
 
-@app.route('/weather')
+@app.route('/weather', methods=['GET', 'POST'])
 def weather():
     temp = request.values.get('temp')
 
