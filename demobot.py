@@ -25,6 +25,8 @@ def weather():
 
     if int(temp) > 20:
         return "🔥" * int(temp)
+    elif int(temp) < 0:
+        return "❄️" * (int(temp) * -1)
     else:
         return f'It is {temp} degrees today'
 if __name__ == '__main__':
