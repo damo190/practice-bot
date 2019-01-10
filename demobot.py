@@ -73,7 +73,7 @@ def burger():
     if b_user_states[user_id] == "DRINK ORDER REQ":
         return "Burger order complete, now please order a drink"
     if b_user_states[user_id] == "BURGER ORDER REQ":
-        return "Drink order complete, now please order a drink"
+        return "Drink order complete, now please order a burger"
     if b_user_states[user_id] == "ORDER COMPLETE":
         order = f"You have ordered a {b_user_order[user_id][0]} burger and a {b_user_order[user_id][1]} drink."
         return order
