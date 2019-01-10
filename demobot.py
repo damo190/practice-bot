@@ -29,6 +29,15 @@ def weather():
         return "❄️" * (int(temp) * -1)
     else:
         return f'It is {temp} degrees today'
+
+@app.route('/lockout', methods = ['GET', 'POST'])
+def lockout(location = request.values.get('text')):
+    if lockout == "":
+        return "Where are you locked out?"
+    else:
+        return f'Sending Smerity to {location} to save you'
+
+
 if __name__ == '__main__':
     # Start the web server!
     app.run()
