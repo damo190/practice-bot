@@ -21,7 +21,7 @@ def greet_person():
 
 @app.route('/weather', methods=['GET', 'POST'])
 def weather():
-    temp = request.values.get('temp')
+    temp = request.values.get('text')
 
     if int(temp) > 30:
         return "It's too hot!"
